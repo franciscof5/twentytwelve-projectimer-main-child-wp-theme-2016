@@ -1,0 +1,84 @@
+/*
+Theme Name:     Focalizador raiz do site
+Theme URI:      http://focalizador.com.br
+Description:    Teme filho do tt12
+Author:         Francisco Matelli Matulovic
+Author URI:     http://franciscomat.com
+Template:       twentytwelve
+Version:        0.2
+*/
+
+@import url("../twentytwelve/style.css");
+
+@font-face {
+    font-family: 'lobster';
+    src: url('fonts/lobster/lobster_1.3-webfont.eot');
+    src: url('fonts/lobster/lobster_1.3-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/lobster/lobster_1.3-webfont.woff2') format('woff2'),
+         url('fonts/lobster/lobster_1.3-webfont.woff') format('woff'),
+         url('fonts/lobster/lobster_1.3-webfont.ttf') format('truetype'),
+         url('fonts/lobster/lobster_1.3-webfont.svg#lobster_1.3regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body .site {margin-top: 0 !important;}
+
+body {
+    background-color: #E6E6E6 !important;
+}
+
+.site-title a {
+    font-family: "Lobster";
+    font-size: 30px;
+}
+
+#blogs-list li {
+	float: left;
+	float: left;
+    padding: 10px !important;
+    width: 25%;
+    border:1px dashed #FFF !important;
+    background-color: #222;
+}
+#blogs-list li:hover {
+	background-color: #4C4C4C;
+}
+#blogs-list a {
+	color: #FFF !important;
+	font-family: Lobster;
+}
+#blogs-list img {
+	font-family: inherit;
+	font-size: 10px;
+}
+#blogs-list li .item-title {
+	top: 10px;
+	text-align: right !important;
+	/*position: absolute;*/
+}
+#blogs-list .action {
+	display: none;
+}
+#blogs-list .item {
+	position: static !important;
+	margin-top: -2px;
+}
+#blogs-list .item-meta	 {
+	bottom: 0;
+    left: 8px;
+    position: absolute;
+    width: 100%;
+}
+#blogs-list .item {
+    width: 65% !important;
+}
+
+.item-list-tabs {
+	display: block !important;
+}
+
+.mu_register input[type="text"], .mu_register input[type="email"] {
+    width: 50% !important;
+}
