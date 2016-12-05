@@ -2,7 +2,6 @@
 	"name": "f5sites/projectimer-main",
 	"description": "Main site wp theme, to regular visitores before become costumer. WordPress F5 Sites DEV projects",
 	"type": "wordpress-theme",
-	"version": "2.0",
 	"authors": [
 		{
 			"name": "Francisco Matelli Matulovic",
