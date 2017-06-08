@@ -69,6 +69,10 @@ if($page=="teams") {
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
+			<span style="float: right;">
+			a
+				<?php //do_action( 'projectimer_show_header_navbar' ); ?>
+			</span>
 			<?php do_action("projectimer_main_show_header_buttons"); ?>
 			<br style="clear:both" />
 			<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -96,6 +100,11 @@ if($page=="teams") {
 				 ?>
 			</div>
 		
-		<?php }	?>
+		<?php }	
+
+		do_action( 'projectimer_display_login_modal' );
+
+		?>
+
 		<div id="main" class="wrapper">
 

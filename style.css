@@ -22,7 +22,6 @@ Version:        0.2
     font-style: normal;
 
 }
-
 body .site {margin-top: 0 !important;}
 
 body {
@@ -32,6 +31,14 @@ body {
 .site-title a {
     font-family: "Lobster";
     font-size: 30px;
+}
+#masthead, .entry-header, #primary {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#site-navigation {
+    margin-top: 0 !important;
+    padding: 10px 0 20px !important;
 }
 
 #blogs-list li {
