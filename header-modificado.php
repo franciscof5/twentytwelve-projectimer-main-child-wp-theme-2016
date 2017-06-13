@@ -27,17 +27,19 @@ if($page=="times" || $page=="teams" || $page=="membro" || $page=="members") {
 
 if($page=="times") {
 	wp_enqueue_script("page-times-js");
+
 }
 
-if($page=="register" && $_SERVER['HTTP_HOST']=="focalizador.com.br") {
+if($page=="register" && $_SERVER['HTTP_HOST']=="www.focalizador.com.br") {
 	wp_redirect("/registrar-se");
 }
 
 if($page=="teams") {
-	if($_SERVER['HTTP_HOST']=="focalizador.com.br")
+	if($_SERVER['HTTP_HOST']=="www.focalizador.com.br")
 	wp_redirect("/times");
 	wp_enqueue_script("page-teams-js");
 }
+//var_dump($_SERVER['HTTP_HOST']);die;
 /**
  * The Header for our theme.
  *

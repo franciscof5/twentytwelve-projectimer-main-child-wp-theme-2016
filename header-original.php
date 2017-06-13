@@ -1,44 +1,13 @@
 <?php
-
-//$domainf = $_SERVER["REQUEST_URI"];
-//$domainf = explode('/', $domainf);
-//$page = $domainf[count($domainf)-2];
-
-$page = basename($_SERVER["REQUEST_URI"]);
-
-if($page=="wp-signup.php") {
-	wp_redirect("/registrar-se");
-} 
-
-/*elseif($page=="teams") {
-	if(get_bloginfo('url')=="http://focalizador.com.br")
-	wp_redirect("/times");
-	
-} */
-
-/*elseif($page=="/wp-signup.php") {
-	wp_enqueue_script("page-wp-signup-js");
-}*/
-
-if($page=="times" || $page=="teams" || $page=="membro" || $page=="members") {
-	if(get_current_user_id()=="")
-		wp_redirect("/registrar-se?warn=closed_to_members");
-}
-
-if($page=="times") {
-	wp_enqueue_script("page-times-js");
-
-}
-
-if($page=="register" && $_SERVER['HTTP_HOST']=="www.focalizador.com.br") {
-	wp_redirect("/registrar-se");
-}
-
-if($page=="teams") {
-	if($_SERVER['HTTP_HOST']=="www.focalizador.com.br")
-	wp_redirect("/plugins/buddypress-br/times/");
-	wp_enqueue_script("page-teams-js");
-}
+/**
+ * The Header template for our theme
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
+ */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
