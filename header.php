@@ -7,7 +7,7 @@
 $page = basename($_SERVER["REQUEST_URI"]);
 
 if($page=="wp-signup.php") {
-	wp_redirect("/registrar-se");
+	//wp_redirect("/registrar-se");
 } 
 
 /*elseif($page=="teams") {
@@ -31,7 +31,7 @@ if($page=="times") {
 }
 
 if($page=="register" && $_SERVER['HTTP_HOST']=="www.focalizador.com.br") {
-	wp_redirect("/registrar-se");
+	//wp_redirect("/registrar-se");
 }
 
 if($page=="teams") {
@@ -65,11 +65,16 @@ if($page=="teams") {
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+
+		<hgroup style="float: left;">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
 
+		</hgroup>
+		<div style="float: right; padding: 15px;">
+		<?php do_action("projectimer_main_show_header_buttons"); ?>
+		</div>
+		<br style="clear:both" />
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
@@ -80,5 +85,5 @@ if($page=="teams") {
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 		<?php endif; ?>
 	</header><!-- #masthead -->
-
+<?php do_action( 'projectimer_display_login_modal' ); ?>
 	<div id="main" class="wrapper">
