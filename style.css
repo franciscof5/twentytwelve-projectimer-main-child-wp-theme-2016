@@ -104,5 +104,5 @@ body {
     background-color: #515151 !important;
 }
 .demo_store {
-    display: none;
+    display: none !important;
 }
