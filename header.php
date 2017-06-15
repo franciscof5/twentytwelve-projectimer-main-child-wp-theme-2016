@@ -26,7 +26,7 @@ if($page=="times" || $page=="teams" || $page=="membro" || $page=="members") {
 }
 
 if($page=="times") {
-	wp_enqueue_script("page-times-js");
+	//wp_enqueue_script("page-times-js");
 
 }
 
@@ -37,7 +37,7 @@ if($page=="register" && $_SERVER['HTTP_HOST']=="www.focalizador.com.br") {
 if($page=="teams") {
 	if($_SERVER['HTTP_HOST']=="www.focalizador.com.br")
 	wp_redirect("/plugins/buddypress-br/times/");
-	wp_enqueue_script("page-teams-js");
+	//wp_enqueue_script("page-teams-js");
 }
 ?><!DOCTYPE html>
 <!--[if IE 7]>

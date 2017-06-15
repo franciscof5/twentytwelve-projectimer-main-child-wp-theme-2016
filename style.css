@@ -45,7 +45,7 @@ body {
 	float: left;
 	float: left;
     padding: 10px !important;
-    width: 25%;
+    width: 100%;
     border:1px dashed #FFF !important;
     background-color: #222;
 }
@@ -54,7 +54,7 @@ body {
 }
 #blogs-list a {
 	color: #FFF !important;
-	font-family: Lobster;
+	/*font-family: Lobster;*/
 }
 #blogs-list img {
 	font-family: inherit;
@@ -62,8 +62,14 @@ body {
 }
 #blogs-list li .item-title {
 	top: 10px;
-	text-align: right !important;
-	/*position: absolute;*/
+    text-align: left;
+    /*font-family: "Open Sans",​Helvetica,​Arial,​sans-serif !important;
+	/*text-align: right !important;
+	position: absolute;*/
+}
+#buddypress ul.item-list li {
+    padding: 4px !important;
+    height: 160px;
 }
 #blogs-list .action {
 	display: none;
@@ -73,13 +79,15 @@ body {
 	margin-top: -2px;
 }
 #blogs-list .item-meta	 {
-	bottom: 0;
+    margin-top: -4px;
+    text-align: left !important;
+	/*bottom: 0;
     left: 8px;
     position: absolute;
-    width: 100%;
+    width: 100%;*/
 }
 #blogs-list .item {
-    width: 65% !important;
+    /*width: 65% !important;*/
 }
 
 .item-list-tabs {
@@ -88,4 +96,13 @@ body {
 
 .mu_register input[type="text"], .mu_register input[type="email"] {
     width: 50% !important;
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    /*font-family: Lobster;
+    font-weight: 100;*/
+    background-color: #515151 !important;
+}
+.demo_store {
+    display: none;
 }
