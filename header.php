@@ -22,7 +22,7 @@ if($page=="wp-signup.php") {
 
 if($page=="times" || $page=="teams" || $page=="membro" || $page=="members") {
 	if(get_current_user_id()=="")
-		wp_redirect("/registrar-se?warn=closed_to_members");
+		wp_redirect("/plugins/buddypress-br/registrar?warn=closed_to_members");
 }
 
 if($page=="times") {
@@ -31,7 +31,7 @@ if($page=="times") {
 }
 
 if($page=="register" && $_SERVER['HTTP_HOST']=="www.focalizador.com.br") {
-	//wp_redirect("/registrar-se");
+	wp_redirect("/plugins/buddypress-br/registrar/");
 }
 
 if($page=="teams") {
@@ -85,5 +85,17 @@ if($page=="teams") {
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 		<?php endif; ?>
 	</header><!-- #masthead -->
-<?php do_action( 'projectimer_display_login_modal' ); ?>
+	<?php 
+		if($_GET["warn"]=="closed_to_members") { ?>
+			<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<?php 
+				if($_SERVER['HTTP_HOST']=="www.focalizador.com.br") {
+					echo 'Por favor crie uma conta ou <a href=#faça class="open_settings_modal" data-toggle="modal" data-target="#login_modal" style="color:#A94442;text-decoration:underline;">faça o login</a> para ver o conteúdo exclusivo';
+				} else {
+					echo 'Please create an account or <a href=#faça class="open_settings_modal" data-toggle="modal" data-target="#login_modal" style="color:#A94442;text-decoration:underline;">login</a> before see members and teams"';
+					//_e(" ", "projectimer-main");
+				} ?>
+			</div>
+		<?php }	?>
+	<?php do_action( 'projectimer_display_login_modal' ); ?>
 	<div id="main" class="wrapper">
