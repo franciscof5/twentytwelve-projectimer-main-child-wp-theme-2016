@@ -13,8 +13,8 @@
 	</div><!-- #main .wrapper -->
 	<footer id="colophon" role="contentinfo">
 		<div class="site-info">
-			<img style="margin-bottom: -8px;" src="<?php echo bloginfo('stylesheet_directory');?>/images/brasil.jpg" alt="bandeira do brasil"/> Tecnologia nacional, desenvolvida por empresa brasileira. CNPJ 17.393.329-0001/62
-			<?php #do_action( 'twentytwelve_credits' ); ?>
+			<img style="margin-bottom: -8px;" src="<?php echo bloginfo('stylesheet_directory');?>/images/brasil.jpg" alt="bandeira do brasil"/> Tecnologia nacional, desenvolvida por empresa brasileira. 
+			<?php #CNPJ 17.393.329-0001/62 #do_action( 'twentytwelve_credits' ); ?>
 			<!--a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a-->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
