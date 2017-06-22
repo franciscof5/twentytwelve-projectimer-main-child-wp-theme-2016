@@ -7,7 +7,7 @@
 $page = basename($_SERVER["REQUEST_URI"]);
 
 if($page=="wp-signup.php") {
-	//wp_redirect("/registrar-se");
+	wp_redirect("/plugins/buddypress-br/registrar/");
 } 
 
 /*elseif($page=="teams") {

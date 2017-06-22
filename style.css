@@ -89,6 +89,12 @@ body {
 #blogs-list .item {
     /*width: 65% !important;*/
 }
+/*#blog-details-section {
+    display: none;
+}*/
+fieldset[class="register-site"] {
+    display: none;
+}
 
 .item-list-tabs {
 	display: block !important;
