@@ -89,6 +89,14 @@ body {
 #blogs-list .item {
     /*width: 65% !important;*/
 }
+.create-site .label {
+    color: #000 !important;
+    text-align: left;
+    font-family: "Open Sans",​Helvetica,​Arial,​sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0;
+}
 /*#blog-details-section {
     display: none;
 }*/
