@@ -43,22 +43,24 @@ body {
 
 #blogs-list li {
 	float: left;
-	float: left;
     padding: 10px !important;
     width: 100%;
     border:1px dashed #FFF !important;
-    background-color: #222;
+    background-color: #DDD;
 }
 #blogs-list li:hover {
-	background-color: #4C4C4C;
+	background-color: #CCC;
 }
 #blogs-list a {
-	color: #FFF !important;
+	color: #444 !important;
 	/*font-family: Lobster;*/
 }
 #blogs-list img {
 	font-family: inherit;
 	font-size: 10px;
+}
+#blogs-list li .item-meta .activity {
+    color: #999;
 }
 #blogs-list li .item-title {
 	top: 10px;
@@ -69,7 +71,7 @@ body {
 }
 #buddypress ul.item-list li {
     padding: 4px !important;
-    height: 160px;
+    height: 110px;
 }
 #blogs-list .action {
 	display: none;
