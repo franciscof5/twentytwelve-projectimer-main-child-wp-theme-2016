@@ -53,7 +53,7 @@ body {
 }
 #blogs-list a {
 	color: #444 !important;
-	/*font-family: Lobster;*/
+	font-family: Lobster;
 }
 #blogs-list img {
 	font-family: inherit;
