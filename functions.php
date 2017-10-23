@@ -1,7 +1,9 @@
 <?php
 //criado por Francisco Matelli Matulovic
 //data-tag: 2016-09-30
-add_filter('show_admin_bar', '__return_false'); 
+#dd_filter('show_admin_bar', '__return_false'); 
+add_filter('is_admin_bar_showing', '__return_false'); 
+#add_filter('_get_admin_bar_pref', '__return_false'); 
 
 add_action('init', 'theme_scripts');
 
