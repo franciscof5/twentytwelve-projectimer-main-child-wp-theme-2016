@@ -1,25 +1,19 @@
 <?php
-
-//$domainf = $_SERVER["REQUEST_URI"];
-//$domainf = explode('/', $domainf);
-//$page = $domainf[count($domainf)-2];
+/**
+ * The Header template for our theme
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
+ */
 
 $page = basename($_SERVER["REQUEST_URI"]);
 
 if($page=="wp-signup.php") {
 	wp_redirect("/plugins/buddypress-br/registrar/");
 } 
-
-/*elseif($page=="teams") {
-	if(get_bloginfo('url')=="http://focalizador.com.br")
-	wp_redirect("/times");
-	
-} */
-
-/*elseif($page=="/wp-signup.php") {
-	wp_enqueue_script("page-wp-signup-js");
-}*/
-
 if($page=="times" || $page=="teams" || $page=="membro" || $page=="members") {
 	if(get_current_user_id()=="")
 		wp_redirect("/plugins/buddypress-br/registrar?warn=closed_to_members");
@@ -39,6 +33,7 @@ if($page=="teams") {
 	wp_redirect("/plugins/buddypress-br/times/");
 	//wp_enqueue_script("page-teams-js");
 }
+
 ?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -65,16 +60,11 @@ if($page=="teams") {
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-
-		<hgroup style="float: left;">
+		<hgroup>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-
 		</hgroup>
-		<div style="float: right; padding: 15px;">
-		<?php do_action("projectimer_main_show_header_buttons"); ?>
-		</div>
-		<br style="clear:both" />
+
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
@@ -86,6 +76,7 @@ if($page=="teams") {
 		<?php endif; ?>
 	</header><!-- #masthead -->
 	<?php 
+		if(isset($_GET["warn"])) {
 		if($_GET["warn"]=="closed_to_members") { ?>
 			<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 				<?php 
@@ -96,6 +87,7 @@ if($page=="teams") {
 					//_e(" ", "projectimer-main");
 				} ?>
 			</div>
-		<?php }	?>
-	<?php do_action( 'projectimer_display_login_modal' ); ?>
+		<?php }
+		}	?>
+	<?php #do_action( 'projectimer_display_login_modal' ); ?>
 	<div id="main" class="wrapper">
